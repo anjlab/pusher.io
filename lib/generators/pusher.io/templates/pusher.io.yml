@@ -1,0 +1,20 @@
+development:
+  app_id: "<%= Rails.application.class.parent_name %>"
+  host: "localhost"
+  port: 9292
+  key: dev123
+  secret: "secret"
+test:
+  app_id: "<%= Rails.application.class.parent_name %>"
+  host: "localhost"
+  port: 9293
+  key: test123
+  secret: "secret"
+production:
+  app_id: "<%= Rails.application.class.parent_name %>"
+  host: "0.0.0.0"
+  port: 4443
+  ssl_key: "/path/to/server.pem"
+  ssl_cert: "/path/to/certificate_chain.pem"
+  key: "<%= defined?(SecureRandom) ? SecureRandom.hex(32) : ActiveSupport::SecureRandom.hex(32) %>"
+  secret: "<%= defined?(SecureRandom) ? SecureRandom.hex(32) : ActiveSupport::SecureRandom.hex(32) %>"
