@@ -2,23 +2,33 @@
 
 This is very basic implementation of subset of pusherapp.com api on top of socket.io.
 
-## Installation
+## Setup
 
-Add this line to your application's Gemfile:
+Add the gem to your Gemfile and run the bundle command to install it.
 
     gem 'pusher.io'
 
-And then execute:
+Run the generator to create the initial files.
 
-    $ bundle
+    $ rails g pusher.io:install
 
-Or install it yourself as:
+Next, start up pusher.io.
 
-    $ gem install pusher.io
+    $ node pusher.io.js
+
+For production
+
+    $ NODE_ENV=production node pusher.io.js
+
+Add the JavaScript file to your application.js file manifest.
+
+    // require pusher.io/client
 
 ## Usage
 
-TODO: Write usage instructions here
+Include pusher io tags in your html head:
+
+    <%= pusher_io_tags %>
 
 ## Contributing
 
