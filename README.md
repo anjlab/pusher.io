@@ -1,6 +1,6 @@
 # pusher.io gem
 
-This is very basic implementation of subset of pusherapp.com api on top of socket.io.
+This is very basic implementation of pusherapp.com api subset on top of socket.io.
 
 ## Setup
 

@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = Pusher::IO::VERSION
   gem.authors       = ["yury"]
   gem.email         = ["yury.korolev@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{Very basic implementation of pusherapp.com api subset on top of socket.io.}
+  gem.summary       = %q{Socket.io for rails}
+  gem.homepage      = "https://github.com/anjlab/pusher.io"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
