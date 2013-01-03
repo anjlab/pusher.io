@@ -4,7 +4,7 @@ module Pusher::IO
       [
         pusher_io_socket_uri,
         pusher_io_socket_client
-      ].join().html_safe
+      ].join.html_safe
     end
 
     def pusher_io_socket_client
