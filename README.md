@@ -29,6 +29,17 @@ Add the JavaScript file to your application.js file manifest.
 Include pusher io tags in your html head:
 
     <%= pusher_io_tags %>
+    
+In your js
+    
+    var channel = pusher.subscribe('notifications');
+    channel.bind('alert', function(data) {
+        alert(data);
+    });
+    
+In your server
+
+    Pusher::IO['notifications'].trigger 'alert', 'hello'
 
 ## Contributing
 
