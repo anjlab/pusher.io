@@ -27,6 +27,14 @@ Add the JavaScript file to your application.js file manifest.
 See [socket.io docs](https://github.com/LearnBoost/Socket.IO/wiki/Configuring-Socket.IO) for Redis config.
 Make your changes in pusher.io.js
 
+Easy *SSL* support. Just add `ssl_key` and `ssl_cert` paths to your env in config/pusher.io.yml:
+
+    production:
+        ...
+        ssl_key: "/path/to/server.pem"
+        ssl_cert: "/path/to/certificate_chain.pem"
+       
+
 ## Usage
 
 Include pusher io tags in your html head:
