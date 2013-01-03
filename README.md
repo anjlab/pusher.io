@@ -33,16 +33,21 @@ Include pusher io tags in your html head:
 
     <%= pusher_io_tags %>
     
-In your js
+Browser side
     
     var channel = pusher.subscribe('notifications');
+    channel.on('alert', function(data) {
+        alert(data);
+    });
+
+    // or use bind
     channel.bind('alert', function(data) {
         alert(data);
     });
     
-In your server
+Server side
 
-    Pusher::IO['notifications'].trigger 'alert', 'hello'
+    Pusher::IO[:notifications].trigger 'alert', 'hello'
 
 ## Contributing
 

@@ -33,13 +33,17 @@ pusher = {}
     return this;
   }
 
-  Channel.prototype.bind = function (event, callback) {
+  Channel.prototype.on = function (event, callback) {
     this.socket.on('pusher:' + event, callback);
   }
 
-  Channel.prototype.unbind = function (event) {
+  Channel.prototype.bind = Channel.prototype.on;
+
+  Channel.prototype.off = function (event) {
     this.socket.off('pusher:' + event);
   }
+
+  Channel.prototype.unbind = Channel.prototype.off;
 
   pusher.channel = function (name) {
     var channel = channels[name];
