@@ -23,6 +23,9 @@ For production
 Add the JavaScript file to your application.js file manifest.
 
     // require pusher.io/client
+    
+See [socket.io docs](https://github.com/LearnBoost/Socket.IO/wiki/Configuring-Socket.IO) for Redis config.
+Make your changes in pusher.io.js
 
 ## Usage
 
