@@ -82,6 +82,8 @@ module Pusher
       end
 
       def socket_base_uri
+        return config[:base_uri] if config[:base_uri]
+
         uri = config[:ssl_key].present? ? "https" : "http"
         uri << "://#{config[:host]}"
         uri << ":#{config[:port]}" if config[:port] && config[:port] != 80
@@ -102,4 +104,3 @@ module Pusher
     end
   end
 end
-
