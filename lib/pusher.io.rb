@@ -95,6 +95,7 @@ module Pusher
       end
 
       def socket_js_uri
+        return config[:socket_js_uri] if config[:socket_js_uri]
         socket_base_uri + "/socket.io/socket.io.js"
       end
 
