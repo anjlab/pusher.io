@@ -10,6 +10,12 @@ pusher = {}
     this.socket = io.connect(socket_uri);
     this.channelName = name;
     this.subscribed = false;
+
+    var self = this;
+    this.socket.on('reconnect', function() {
+      self.subscribed = false;
+      self.subscribe();
+    });
   }
 
   Channel.prototype.subscribe = function() {
